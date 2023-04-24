@@ -35,7 +35,7 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useForm } from 'vee-validate';
 import * as yup from 'yup';
-import TextInput from '../components/TextInput.vue'
+import TextInput from '../shared/TextInput.vue'
 
 const router = useRouter();
 const imputsList = new Object({

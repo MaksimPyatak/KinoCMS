@@ -1,17 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<template>
+<template >
    <!--<Preloader />-->
-   <MainLayout>
-      <router-view />
-   </MainLayout>
+   <router-view />
 </template>
 
 <script setup>
 //import { computed } from "vue";
 import { RouterView } from 'vue-router'
-import MainLayout from '@/layout/MainLayout.vue';
 </script>
 
-<style lang="scss" scoped>
-@import './index.scss';
-</style>
+<style lang="scss" scoped></style>

@@ -1,27 +1,30 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-   <div>
-      <h1>
-         Home page
-      </h1>
+   <LayoutFrame>
+      <div class="home-page">
+         <h1>
+            Home page
+         </h1>
       <!--<p>
          Country: {{ name }}<br>
          Capital: {{ capital }}
-      </p>-->
-      <p v-for="country in countries" :key="country.name">
-         Country: {{ country.name }}<br>
-         Capital: {{ country.capital }}
-      </p>
-      <p v-for="user in users" :key="user.firstName">
-         {{ user.firstName }} {{ user.lastName }}
-      </p>
-   </div>
+                  </p>-->
+         <p v-for="country in countries" :key="country.name">
+            Country: {{ country.name }}<br>
+            Capital: {{ country.capital }}
+         </p>
+         <p v-for="user in users" :key="user.firstName">
+            {{ user.firstName }} {{ user.lastName }}
+         </p>
+      </div>
+   </LayoutFrame>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import { collection, addDoc, doc, setDoc, updateDoc, getDoc, getDocs, query, where } from "firebase/firestore"
-import db from '../firebase/init.js'
-import { async } from "@firebase/util";
+import db from '../../firebase/init.js'
+import LayoutFrame from "@/features/layout-frame/LayoutFrame.vue";
 
 async function createUser() {
    const colRef = collection(db, 'users');
@@ -94,4 +97,8 @@ onMounted(() => {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home-page {
+   margin-left: 250px;
+}
+</style>
