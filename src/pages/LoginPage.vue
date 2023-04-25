@@ -38,11 +38,11 @@ import * as yup from 'yup';
 import TextInput from '../shared/TextInput.vue'
 
 const router = useRouter();
-const imputsList = new Object({
+const imputsList = {
    '0': { id: 'email', placeholder: 'Email', type: 'email', name: "email" },
    '1': { id: 'password', placeholder: 'Password', type: 'password', name: "password" },
 
-});
+};
 const isUA = ref(true);
 const labelPorgotPassword = computed(() => {
    return isUA.value ? 'Я забув свій пароль' : 'I forgot my password'
