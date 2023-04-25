@@ -1,7 +1,7 @@
 import { createApp } from 'vue' //!!!!!
 import { createPinia } from 'pinia'
 
-import App from '@/app/index.vue'
+import App from '@/App.vue'
 import { router } from './providers'
 //import './styles/admin-lte-style.scss'
 import './index.scss';

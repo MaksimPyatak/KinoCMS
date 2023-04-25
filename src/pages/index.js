@@ -4,7 +4,14 @@ export const routes = [
    {
       path: '/',
       name: 'home',
+      meta: { layout: 'main' },
       component: () => import('@/pages/home-page/HomePage.vue')
+   },
+   {
+      path: '/about-cinema',
+      name: 'about-cinema',
+      meta: { layout: 'main' },
+      component: () => import('@/pages/about-cinema/AboutCinema.vue')
    },
    {
       path: '/login',
