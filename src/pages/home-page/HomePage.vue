@@ -5,7 +5,7 @@
          <h1>
             Home page
          </h1>
-      <!--<p>
+         <!--<p>
          Country: {{ name }}<br>
          Capital: {{ capital }}
                   </p>-->
@@ -92,7 +92,7 @@ onMounted(() => {
    //updateCountry();
    //getCountry();
    //getCountries();
-   //getUsers();
+   getUsers();
 })
 
 </script>
